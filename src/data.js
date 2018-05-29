@@ -3,7 +3,7 @@ export default {
         {
             period: "03.2018",
             fio: "Литвиненко Александр Юрьевич",
-            address: "ул. Ленина д. 20",
+            address: "a2",
             startKwh: "588.797",
             expenseKwh: "0.425",
             finishKwh: "589.222",
@@ -13,7 +13,7 @@ export default {
         {
             period: "03.2018",
             fio: "Литвиненко Александр Юрьевич",
-            address: "пр. Победы д. 30",
+            address: "a2",
             startKwh: "1.797",
             expenseKwh: "0.225",
             finishKwh: "2.022",
@@ -23,7 +23,7 @@ export default {
         {
             period: "02.2018",
             fio: "Литвиненко Александр Юрьевич",
-            address: "ул. Ленина д. 20",
+            address: "a2",
             startKwh: "588.797",
             expenseKwh: "0.425",
             finishKwh: "589.222",
@@ -33,7 +33,7 @@ export default {
         {
             period: "01.2018",
             fio: "Литвиненко Александр Юрьевич",
-            address: "ул. Ленина д. 20",
+            address: "a2",
             startKwh: "588.797",
             expenseKwh: "0.425",
             finishKwh: "589.222",
@@ -43,7 +43,7 @@ export default {
         {
             period: "12.2017",
             fio: "Литвиненко Александр Юрьевич",
-            address: "ул. Ленина д. 20",
+            address: "a2",
             startKwh: "528.712",
             expenseKwh: "0.325",
             finishKwh: "529.222",
@@ -51,9 +51,65 @@ export default {
             checkoutPrice: "121.23"
         }
     ],
+    gas: [
+        {
+            period: "12.12.2017 15:00",
+            fio: "Литвиненко Александр Юрьевич",
+            address: "a1",
+            amount: "0.112",
+            price: "9.25",
+            checkoutPrice: "1,036"
+        },
+        {
+            period: "12.12.2017 17:00",
+            fio: "Литвиненко Александр Юрьевич",
+            address: "a1",
+            amount: "0.20",
+            price: "9.25",
+            checkoutPrice: "1,85"
+        }
+    ],
+    water: [
+        {
+            period: "12.12.2017 15:00",
+            fio: "Литвиненко Александр Юрьевич",
+            address: "a1",
+            type: "wt2",
+            amount: "0.520",
+            price: "3.25",
+            checkoutPrice: "1,69"
+        },
+        {
+            period: "12.12.2017 16:00",
+            fio: "Литвиненко Александр Юрьевич",
+            address: "a1",
+            type: "wt1",
+            amount: "0.120",
+            price: "3.25",
+            checkoutPrice: "0,39"
+        },
+        {
+            period: "12.12.2017 17:00",
+            fio: "Литвиненко Александр Юрьевич",
+            address: "a1",
+            type: "wt1",
+            amount: "0.620",
+            price: "3.25",
+            checkoutPrice: "2,015"
+        }
+    ],
+    waterTypes: [
+        { id: "wt1", name: "Холодная" },
+        { id: "wt2", name: "Горячая" }
+    ],
     addreses: [
         {
+            id: "a1",
             name: "ул. Пушкина д. Колотушкина"
+        },
+        {
+            id: "a2",
+            name: "ул. Кукушкна д. Пиздушкина"
         }
     ],
     users: [

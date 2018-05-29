@@ -5,7 +5,8 @@ import {
     Datagrid,
     TextField,
     NumberField,
-    ShowButton
+    ShowButton,
+    ReferenceField
 } from "admin-on-rest";
 import { PagesFilter } from "../pages-partials";
 
@@ -26,7 +27,13 @@ export const ElectricityList = props => (
                 <Datagrid>
                     <TextField label="Период" source="period" />
                     <TextField label="Владелец" source="fio" />
-                    <TextField label="Адрес" source="address" />
+                    <ReferenceField
+                        label="Адрес"
+                        source="address"
+                        reference="addreses"
+                    >
+                        <TextField source="name" />
+                    </ReferenceField>
                     <NumberField label="Начало, kWh" source="startKwh" />
                     <NumberField label="Расход, kWh" source="expenseKwh" />
                     <NumberField label="Конец, kWh" source="finishKwh" />

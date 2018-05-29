@@ -51,5 +51,6 @@ export const App = () => (
             show={WaterShow}
         />
         <Resource name="addreses" />
+        <Resource name="waterTypes" />
     </Admin>
 );
