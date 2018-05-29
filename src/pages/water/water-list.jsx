@@ -9,8 +9,8 @@ import {
 } from "admin-on-rest";
 import { PagesFilter } from "../pages-partials";
 
-export const ElectricityList = props => (
-    <List title="Электроэнергия" {...props} filters={<PagesFilter />}>
+export const WaterList = props => (
+    <List title="Водоснабжение" {...props} filters={<PagesFilter />}>
         <Responsive
             small={
                 <Datagrid>
@@ -27,10 +27,8 @@ export const ElectricityList = props => (
                     <TextField label="Период" source="period" />
                     <TextField label="Владелец" source="fio" />
                     <TextField label="Адрес" source="address" />
-                    <NumberField label="Начало, kWh" source="startKwh" />
-                    <NumberField label="Расход, kWh" source="expenseKwh" />
-                    <NumberField label="Конец, kWh" source="finishKwh" />
-                    <NumberField label="Цена за kWh" source="price" />
+                    <NumberField label="Обьем, м3" source="amount" />
+                    <NumberField label="Цена за м3" source="price" />
                     <NumberField
                         label="Сумма к оплате"
                         source="checkoutPrice"

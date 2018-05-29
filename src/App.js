@@ -1,16 +1,17 @@
-import * as React from 'react';
-import { Admin, Resource } from 'admin-on-rest';
-import jsonRestClient from 'aor-json-rest-client';
-import logo from './logo.svg';
-import './App.css';
-import russianMessages from 'aor-language-russian';
-import addUploadFeature from './addUploadFeature';
-import { authClient } from './auth-client';
-import data from './data';
-import { ElectricityList, ElectricityShow } from './pages/electricity';
+import * as React from "react";
+import { Admin, Resource } from "admin-on-rest";
+import jsonRestClient from "aor-json-rest-client";
+import "./App.css";
+import russianMessages from "aor-language-russian";
+import addUploadFeature from "./addUploadFeature";
+import { authClient } from "./auth-client";
+import data from "./data";
+import { ElectricityList, ElectricityShow } from "./pages/electricity";
+import { GasList, GasShow } from "./pages/gas";
+import { WaterList, WaterShow } from "./pages/water";
 
 const messages = {
-    'ru': russianMessages,
+    ru: russianMessages
 };
 
 const restClient = jsonRestClient(data, true);
@@ -37,5 +38,18 @@ export const App = () => (
             list={ElectricityList}
             show={ElectricityShow}
         />
+        <Resource
+            options={{ label: "Газоснабжение" }}
+            name="gas"
+            list={GasList}
+            show={GasShow}
+        />
+        <Resource
+            options={{ label: "Водоснабжение" }}
+            name="water"
+            list={WaterList}
+            show={WaterShow}
+        />
+        <Resource name="addreses" />
     </Admin>
 );

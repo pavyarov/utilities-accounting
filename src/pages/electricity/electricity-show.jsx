@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { Link } from 'react-router-dom';
 import { Show, SimpleShowLayout, TextField } from 'admin-on-rest';
 import { RaisedButton } from 'material-ui';
 
