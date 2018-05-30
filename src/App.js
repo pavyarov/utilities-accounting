@@ -11,6 +11,11 @@ import { GasList, GasShow } from "./pages/gas";
 import { WaterList, WaterShow } from "./pages/water";
 import { AdresesList, AdresesCreate, AdresesEdit } from "./pages/adreses";
 import { DevicesList, DevicesCreate, DevicesEdit } from "./pages/devices";
+import HomeIcon from "material-ui/svg-icons/action/home";
+import ElectricityIcon from "material-ui/svg-icons/notification/power";
+import WaterIcon from "material-ui/svg-icons/action/opacity";
+import GasIcon from "material-ui/svg-icons/image/blur-on";
+import DeviceIcon from "material-ui/svg-icons/action/settings-input-antenna";
 
 const messages = {
     ru: russianMessages
@@ -39,18 +44,21 @@ export const App = () => (
             name="electricity"
             list={ElectricityList}
             show={ElectricityShow}
+            icon={ElectricityIcon}
         />
         <Resource
             options={{ label: "Газоснабжение" }}
             name="gas"
             list={GasList}
             show={GasShow}
+            icon={GasIcon}
         />
         <Resource
             options={{ label: "Водоснабжение" }}
             name="water"
             list={WaterList}
             show={WaterShow}
+            icon={WaterIcon}
         />
         <Resource
             options={{ label: "Адреса" }}
@@ -59,6 +67,7 @@ export const App = () => (
             create={AdresesCreate}
             edit={AdresesEdit}
             remove={Delete}
+            icon={HomeIcon}
         />
         <Resource
             options={{ label: "Устройства учета" }}
@@ -67,6 +76,7 @@ export const App = () => (
             create={DevicesCreate}
             edit={DevicesEdit}
             remove={Delete}
+            icon={DeviceIcon}
         />
         <Resource name="waterTypes" />
     </Admin>
