@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Admin, Resource } from "admin-on-rest";
+import { Admin, Resource, Delete } from "admin-on-rest";
 import jsonRestClient from "aor-json-rest-client";
 import "./App.css";
 import russianMessages from "aor-language-russian";
@@ -9,6 +9,8 @@ import data from "./data";
 import { ElectricityList, ElectricityShow } from "./pages/electricity";
 import { GasList, GasShow } from "./pages/gas";
 import { WaterList, WaterShow } from "./pages/water";
+import { AdresesList, AdresesCreate, AdresesEdit } from "./pages/adreses";
+import { DevicesList, DevicesCreate, DevicesEdit } from "./pages/devices";
 
 const messages = {
     ru: russianMessages
@@ -50,7 +52,22 @@ export const App = () => (
             list={WaterList}
             show={WaterShow}
         />
-        <Resource name="addreses" />
+        <Resource
+            options={{ label: "Адреса" }}
+            name="addreses"
+            list={AdresesList}
+            create={AdresesCreate}
+            edit={AdresesEdit}
+            remove={Delete}
+        />
+        <Resource
+            options={{ label: "Устройства учета" }}
+            name="devices"
+            list={DevicesList}
+            create={DevicesCreate}
+            edit={DevicesEdit}
+            remove={Delete}
+        />
         <Resource name="waterTypes" />
     </Admin>
 );

@@ -40,6 +40,13 @@ export const GasList = props => (
                         label="Сумма к оплате"
                         source="checkoutPrice"
                     />
+                    <ReferenceField
+                        label="Устройство"
+                        source="device"
+                        reference="devices"
+                    >
+                        <TextField source="name" />
+                    </ReferenceField>
                     <ShowButton />
                 </Datagrid>
             }
